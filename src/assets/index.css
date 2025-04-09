@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "league spartan", sans-serif;
+}
+
+/* Tailwind custom class for hiding scrollbar */
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+  /* Hides the scrollbar in Webkit browsers (Chrome, Safari) */
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  /* Hides scrollbar for IE and Edge */
+  scrollbar-width: none;
+  /* Hides scrollbar for Firefox */
+}
