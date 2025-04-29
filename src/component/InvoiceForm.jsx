@@ -354,7 +354,7 @@ function InvoiceForm({ invoice }) {
                                 <input 
                                     type="number" 
                                     className="bg-[#1E3E62] rounded-lg p-3 col-span-2"
-                                    placeholder="Quantity"
+                                    placeholder="Qty."
                                     min="0"
                                     step="1"
                                     required
@@ -363,7 +363,7 @@ function InvoiceForm({ invoice }) {
                                 <input 
                                     type="number" 
                                     className="bg-[#1E3E62] rounded-lg p-3 col-span-2"
-                                    placeholder="Price"
+                                    placeholder="$"
                                     min="0"
                                     step="1"
                                     required
