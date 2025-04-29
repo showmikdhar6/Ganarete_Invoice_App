@@ -98,7 +98,7 @@ function InvoiceForm({ invoice }) {
                         <h3 className="text-orange-500 font-bold">Bill From</h3>
                         <input
                             type="text"
-                            placeholder="City"
+                            placeholder="Company Name"
                             required
                             value={formData.billFrom.city}
                             onChange={(e) => setFormData({
@@ -108,9 +108,84 @@ function InvoiceForm({ invoice }) {
                             })}
                             className="w-full bg-[#1E3E62] rounded-lg p-3"
                         />
+                        <input
+                            type="text"
+                            placeholder="Company Email"
+                            required
+                            value={formData.billFrom.city}
+                            onChange={(e) => setFormData({
+                                ...formData, billFrom: {
+                                    ...formData.billFrom, city: e.target.value,
+                                },
+                            })}
+                            className="w-full bg-[#1E3E62] rounded-lg p-3"
+                        />
+                        {/* <input
+                            type="text"
+                            placeholder="City"
+                            required
+                            value={formData.billFrom.city}
+                            onChange={(e) => setFormData({
+                                ...formData, billFrom: {
+                                    ...formData.billFrom, city: e.target.value,
+                                },
+                            })}
+                            className="w-full bg-[#1E3E62] rounded-lg p-3"
+                        /> */}
                     </div>
 
-                    <div className="grid grid-cols-3 gap-4">
+                    <div className="grid grid-cols-4 gap-4">
+                        <input
+                            type="text"
+                            placeholder="City"
+                            required
+                            value={formData.billTo.city}
+                            onChange={(e) => setFormData({
+                                ...formData, billTo: {
+                                    ...formData.billTo, city: e.target.value,
+                                },
+                            })}
+                            className="w-full bg-[#1E3E62] rounded-lg p-3 mt-1"
+                        />
+                        <input
+                            type="text"
+                            placeholder="State"
+                            required
+                            value={formData.billTo.streetAddress}
+                            onChange={(e) => setFormData({
+                                ...formData, billTo: {
+                                    ...formData.billTo, streetAddress: e.target.value,
+                                },
+                            })}
+                            className="w-full bg-[#1E3E62] rounded-lg p-3 mt-1"
+                        />
+                        <input
+                            type="text"
+                            placeholder="Post Code"
+                            required
+                            value={formData.billTo.postCode}
+                            onChange={(e) => setFormData({
+                                ...formData, billTo: {
+                                    ...formData.billTo, postCode: e.target.value,
+                                },
+                            })}
+                            className="w-full bg-[#1E3E62] rounded-lg p-3 mt-1"
+                        />
+                        <input
+                            type="text"
+                            placeholder="Country"
+                            required
+                            value={formData.billTo.country}
+                            onChange={(e) => setFormData({
+                                ...formData, billTo: {
+                                    ...formData.billTo, country: e.target.value,
+                                },
+                            })}
+                            className="w-full bg-[#1E3E62] rounded-lg p-3 mt-1"
+                        />
+                    </div>
+
+                    {/* <div className="grid grid-cols-3 gap-4">
                         <input
                             type="text"
                             placeholder="State"
@@ -137,7 +212,7 @@ function InvoiceForm({ invoice }) {
                         />
                         <input
                             type="text"
-                            placeholder="Contry"
+                            placeholder="Country"
                             required
                             value={formData.billFrom.country}
                             onChange={(e) => setFormData({
@@ -147,13 +222,13 @@ function InvoiceForm({ invoice }) {
                             })}
                             className="w-full bg-[#1E3E62] rounded-lg p-3 mt-1"
                         />
-                    </div>
+                    </div> */}
 
                     <div className="space-y-2">
                         <h3 className="text-orange-500 font-bold">Bill To</h3>
                         <input
                             type="text"
-                            placeholder="Client's Name"
+                            placeholder="Customer Name"
                             required
                             value={formData.clientName}
                             onChange={(e) => setFormData({ ...formData, clientName: e.target.value })}
@@ -161,7 +236,7 @@ function InvoiceForm({ invoice }) {
                         />
                         <input
                             type="email"
-                            placeholder="Client's Email"
+                            placeholder="Customer Email"
                             required
                             value={formData.billTo.clientEmail}
                             onChange={(e) => setFormData({
@@ -214,7 +289,7 @@ function InvoiceForm({ invoice }) {
                         />
                         <input
                             type="text"
-                            placeholder="Contry"
+                            placeholder="Country"
                             required
                             value={formData.billTo.country}
                             onChange={(e) => setFormData({
@@ -276,26 +351,25 @@ function InvoiceForm({ invoice }) {
                                     onChange={(e) => updateItem(index, "name", e.target.value)}
                                     className="bg-[#1E3E62] rounded-lg p-3 col-span-5"
                                 />
-                                <input
-                                    type="number"
+                                <input 
+                                    type="number" 
+                                    className="bg-[#1E3E62] rounded-lg p-3 col-span-2"
                                     placeholder="Quantity"
-                                    className="bg-[#1E3E62] rounded-lg p-3 col-span-2"
                                     min="0"
                                     step="1"
                                     required
-                                    value={item.quantity}
                                     onChange={(e) => updateItem(index, "quantity", parseInt(e.target.value) || 0)}
-                                />
-                                <input
-                                    type="number"
-                                    placeholder="price"
+                                    />
+                                <input 
+                                    type="number" 
                                     className="bg-[#1E3E62] rounded-lg p-3 col-span-2"
+                                    placeholder="Price"
                                     min="0"
                                     step="1"
                                     required
-                                    value={item.price}
                                     onChange={(e) => updateItem(index, "price", parseFloat(e.target.value) || 0)}
-                                />
+                                    />
+
                                 <div className=" col-span-2 text-right text-[18px]">
                                     ${item.total.toFixed(2)}
                                 </div>
