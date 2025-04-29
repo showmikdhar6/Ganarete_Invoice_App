@@ -330,7 +330,7 @@ function InvoiceForm({ invoice }) {
 
                         <input
                             type="text"
-                            placeholder="Project Description"
+                            placeholder="Description"
                             required
                             value={formData.projectDescription}
                             onChange={
