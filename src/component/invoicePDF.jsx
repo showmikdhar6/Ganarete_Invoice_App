@@ -187,15 +187,16 @@ export const InvoicePDF = ({ invoice }) => {
                         <View style={styles.column}>
                             <Text style={styles.label}>Bill To</Text>
                             <Text style={styles.value}>{invoice.clientName}</Text>
+                            <Text style={styles.value}>{invoice.billTo.clientEmail}</Text>
                             <Text style={styles.value}>{invoice.billTo.streetAddress}</Text>
                             <Text style={styles.value}>{invoice.billTo.city}</Text>
                             <Text style={styles.value}>{invoice.billTo.postCode}</Text>
                             <Text style={styles.value}>{invoice.billTo.country}</Text>
                         </View>
-                        <View style={styles.column}>
+                        {/* <View style={styles.column}>
                             <Text style={styles.label}>Ship To</Text>
                             <Text style={styles.value}>{invoice.billTo.clientEmail}</Text>
-                        </View>
+                        </View> */}
                     </View>
                 </View>
 
