@@ -100,10 +100,10 @@ function InvoiceForm({ invoice }) {
                             type="text"
                             placeholder="Company Name"
                             required
-                            value={formData.billFrom.city}
+                            value={formData.billFrom.companyName}
                             onChange={(e) => setFormData({
                                 ...formData, billFrom: {
-                                    ...formData.billFrom, city: e.target.value,
+                                    ...formData.billFrom, companyName: e.target.value,
                                 },
                             })}
                             className="w-full bg-[#1E3E62] rounded-lg p-3"
@@ -112,10 +112,10 @@ function InvoiceForm({ invoice }) {
                             type="text"
                             placeholder="Company Email"
                             required
-                            value={formData.billFrom.city}
+                            value={formData.billFrom.companyEmail}
                             onChange={(e) => setFormData({
                                 ...formData, billFrom: {
-                                    ...formData.billFrom, city: e.target.value,
+                                    ...formData.billFrom, companyEmail: e.target.value,
                                 },
                             })}
                             className="w-full bg-[#1E3E62] rounded-lg p-3"
@@ -139,10 +139,10 @@ function InvoiceForm({ invoice }) {
                             type="text"
                             placeholder="City"
                             required
-                            value={formData.billTo.city}
+                            value={formData.billFrom.city}
                             onChange={(e) => setFormData({
-                                ...formData, billTo: {
-                                    ...formData.billTo, city: e.target.value,
+                                ...formData, billFrom: {
+                                    ...formData.billFrom, city: e.target.value,
                                 },
                             })}
                             className="w-full bg-[#1E3E62] rounded-lg p-3 mt-1"
@@ -151,10 +151,10 @@ function InvoiceForm({ invoice }) {
                             type="text"
                             placeholder="State"
                             required
-                            value={formData.billTo.streetAddress}
+                            value={formData.billFrom.streetAddress}
                             onChange={(e) => setFormData({
-                                ...formData, billTo: {
-                                    ...formData.billTo, streetAddress: e.target.value,
+                                ...formData, billFrom: {
+                                    ...formData.billFrom, streetAddress: e.target.value,
                                 },
                             })}
                             className="w-full bg-[#1E3E62] rounded-lg p-3 mt-1"
@@ -163,10 +163,10 @@ function InvoiceForm({ invoice }) {
                             type="text"
                             placeholder="Post Code"
                             required
-                            value={formData.billTo.postCode}
+                            value={formData.billFrom.postCode}
                             onChange={(e) => setFormData({
-                                ...formData, billTo: {
-                                    ...formData.billTo, postCode: e.target.value,
+                                ...formData, billFrom: {
+                                    ...formData.billFrom, postCode: e.target.value,
                                 },
                             })}
                             className="w-full bg-[#1E3E62] rounded-lg p-3 mt-1"
@@ -175,10 +175,10 @@ function InvoiceForm({ invoice }) {
                             type="text"
                             placeholder="Country"
                             required
-                            value={formData.billTo.country}
+                            value={formData.billFrom.country}
                             onChange={(e) => setFormData({
-                                ...formData, billTo: {
-                                    ...formData.billTo, country: e.target.value,
+                                ...formData, billFrom: {
+                                    ...formData.billFrom, country: e.target.value,
                                 },
                             })}
                             className="w-full bg-[#1E3E62] rounded-lg p-3 mt-1"
