@@ -84,7 +84,7 @@ function InvoiceForm({ invoice }) {
 
     return (
         <div className="fixed inset-0 flex items-center justify-center overflow-y-auto">
-            <div className="bg-[#0B192C] p-10 rounded-lg w-full max-w-2xl mt-5  overflow-y-scroll h-[90vh] scrollbar-hidden">
+            <div className="bg-[#0B192C] p-10 rounded-lg w-full max-w-2xl mt-5  overflow-y-scroll h-[70vh] scrollbar-hidden">
                 <div className="flex justify-between items-center mb-2">
                     <h2 className="text-bold text-2xl">New Invoice</h2>
 
